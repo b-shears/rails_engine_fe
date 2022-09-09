@@ -3,7 +3,8 @@ require 'rails_helper'
 
 RSpec.describe "MerchantService", :vcr do 
     it "returns merchant attributes" do
-        merchants = MerchantService.get_all_merchants
+        merchant = MerchantService.new 
+        merchants = merchant.get_all_merchants
         
 
         expect(merchants).to be_a(Hash)
